@@ -60,3 +60,38 @@ def sort_by_last_name():
      return employees["rows"] 
 sorted_rows = sort_by_last_name()
 print(employees)
+
+# Task 8: Create a dict for an Employee
+def employee_dict(row):
+     fields = employees["fields"][1:] 
+     result_dict = dict(zip(fields, row[1:]))
+     return result_dict
+employee = employees["rows"][0]
+result = employee_dict(employee)
+print(result)
+
+# Task 9: A dict of dicts, for All Employees
+def all_employees_dict():
+     all_employees = {}
+     for row in employees["rows"]:
+        employee_id = row[0]
+        employee_info = employee_dict(row)
+        all_employees[employee_id] = employee_info
+     return all_employees   
+result = all_employees_dict()
+print(result)    
+
+# Task 10: Use the os Module
+import os
+def get_this_value():
+     return os.getenv('THISVALUE')
+print(get_this_value())
+
+# Task 11: Creating Your Own Module
+import custom_module
+def set_that_secret(secret):
+     custom_module.set_secret(secret)
+set_that_secret("my_new_secret")
+print (custom_module.secret)
+
+# Task 12: Read minutes1.csv and minutes2.csv
