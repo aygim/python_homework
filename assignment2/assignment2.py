@@ -1,16 +1,17 @@
 # Task 2: Read a CSV File
 import csv
-value = "employees"
 def read_employees ():
-    emptyDict = {}
+    dict_emp = {}
     row_list = []
     try:
-        with open('../csv/employees.csv', newline='') as csvfile:
-            csv_file_object = csv.reader(csvfile)
-            emptyDict["fields"] = next(csv_file_object)
-            for row in csv_file_object:
+        with open('../csv/employees.csv', 'r') as csvfile:
+            reader = csv.reader(csvfile)
+            dict_emp["fields"] = next(reader)
+            for row in reader:
                     row_list.append(row)
-            emptyDict["rows"] = row_list
+            dict_emp["rows"] = row_list
+            return dict_emp
+        
     except Exception as e:
         print (f"SyntaxError: invalid syntax")
         exit()

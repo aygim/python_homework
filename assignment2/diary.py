@@ -1,11 +1,13 @@
 import traceback
 try:
     with open('diary.txt', 'a') as file:
-        entry = input("What happened today? ")
-        while entry.lower() != "done for now":
-            file.write(entry + '\n')
-            entry = input("What else?")
-    file.write("done for now\n")
+      promt = "What happened today? "
+      while True:
+            input_str = input(promt)
+            promt = "What else?"
+            if input_str == "done for now":
+               break
+            file.write(input_str + '\n')
 except Exception as e:
    trace_back = traceback.extract_tb(e.__traceback__)
    stack_trace = list()
