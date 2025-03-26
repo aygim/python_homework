@@ -19,4 +19,3 @@ except Exception as e:
       print(f"Exception message: {message}")
    print(f"Stack trace: {stack_trace}")
 
-

@@ -32,7 +32,7 @@ def calc(x, y, operation="multiply"):
     except ZeroDivisionError:
         return "You can't divide by 0!"
     except TypeError:
-        return "You can't multiply those values!"
+        return f"you can't {operation} those values!"
     finally:
        print("Calculation finished")
 result = calc(5,3,"add")     
@@ -82,28 +82,22 @@ def data_type_conversion(value, data_type):
 
 # Task 5
 def grade(*args):
-    try:
-        if not args:
-            return "No grades provided"
-        if not all(isinstance(arg, (int, float)) for arg in args):
-            raise ValueError("Invalid data was provided.")
-        average = sum(args) / len(args)
-
+    if len(args) == 0:
+        return "Invalid data was provided."
+    try: 
+        average = sum(args)/len(args)
         if average >= 90:
             return "A"
         elif average >= 80:
             return "B"
-        elif average >= 70:
+        elif average >=70:
             return "C"
-        elif average >= 60:
+        elif average >=60:
             return "D"
         else:
             return "F"
-    except ValueError:
+    except:
         return "Invalid data was provided."
-
-    finally:
-        print("Finished")
 
 #  Task 6       
 def repeat (string, count):
