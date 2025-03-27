@@ -150,6 +150,7 @@ def create_minutes_list():
 minutes_list = create_minutes_list()
 print(minutes_list)
 
+# Task 15: Write Out Sorted List
 def write_sorted_list():
      minutes_list.sort(key = lambda x: x[1])
      conv_list =  list(map(lambda x: (x[0], datetime.strftime(x[1], "%B %d, %Y")), minutes_list))
