@@ -1,0 +1,20 @@
+the rain
+the sun
+done for now
+the sun
+thre rain
+hjfghjf
+34534
+hguhfjkhjkfjhkkhkl
+ukjgjcg
+"c:/Users/stetc/Desktop/PYTHON CTD/python_class/python_homework/.venv/Scripts/python.exe" "c:/Users/stetc/Desktop/PYTHON CTD/python_class/python_homework/assignment2/diary.py"
+clear
+"c:/Users/stetc/Desktop/PYTHON CTD/python_class/python_homework/.venv/Scripts/python.exe" "c:/Users/stetc/Desktop/PYTHON CTD/python_class/python_homework/assignment2/diary.py"
+I was learning lesson 2 materials.
+I started to do the homework.
+It was sunny.
+1
+2
+1
+2
+2
