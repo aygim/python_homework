@@ -38,4 +38,8 @@ with sqlite3.connect("../db/school.db") as conn:
     )
     """)
 
+
+
+
+
 print("Tables created successfully.")

@@ -97,8 +97,6 @@ try:
     for row in results:
         print(row)
 
-    conn.commit()
-
 except Exception as e:
     conn.rollback()
     print(f"An error occurred: {e}")        
