@@ -26,7 +26,7 @@ filtered_df = df[
     (df["League"].isin(selected_leagues))
 ]
 
-st.title("MLB Batting Average Dashboard — Enhanced Version")
+st.title("MLB Batting Average Dashboard")
 
 # 1. Scatter Plot: Player AVG over Years
 st.markdown("### Player Batting Average Distribution Over Years")
@@ -36,8 +36,7 @@ scatter = alt.Chart(filtered_df).mark_circle(size=60).encode(
     x=alt.X("Year:O", title="Year"),
     y=alt.Y("AVG:Q", title="Batting Average (AVG)"),
     color=alt.Color("League:N", title="League"),
-    tooltip=["Player", "Team", "AVG", "Year", "League"]
-).interactive().properties(width=700, height=400)
+    tooltip=["Player", "Team", "AVG", "Year", "League"]).interactive().properties(width=700, height=400)
 
 st.altair_chart(scatter, use_container_width=True)
 
@@ -61,8 +60,7 @@ top_players = (
     filtered_df.groupby("Player", as_index=False)
     .agg({"AVG": "max", "Team": "first", "League": "first"})
     .sort_values("AVG", ascending=False)
-    .head(10)
-)
+    .head(10))
 
 top_players["AVG"] = top_players["AVG"].round(3)
 
