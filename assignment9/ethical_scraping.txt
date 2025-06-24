@@ -1,0 +1,15 @@
+Task 5
+
+1. Which sections of the website are restricted for crawling?
+Answer:
+Sections restricted for crawling are those paths listed under Disallow directives in the robots.txt file.
+
+2. Are there specific rules for certain user agents?
+Yes, the robots.txt file contains specific rules for different user agents. 
+Some user agents have customized Disallow or Allow directives, 
+meaning the website restricts or permits crawling of certain sections differently depending on the crawler's identity.
+
+3. Reflect on why websites use robots.txt and write 2-3 sentences explaining its purpose and how it promotes ethical scraping.
+Websites use robots.txt to communicate with web crawlers about which parts of the site can or can not be accessed. 
+This promotes ethical scraping by respectiing the site owner's wishes and helping to avoid overloading the server.
+Robots.txt is important part of responsible and legal web scraping.

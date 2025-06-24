@@ -1,0 +1,4 @@
+Challenges I faced:
+It took quite some time to find the correct HTML elements. 
+And I checked my code step by step to make sure it worked.
+Also finding the right Xpath to get the top 10 vulnerabilities was challenging.

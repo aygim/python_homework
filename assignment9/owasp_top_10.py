@@ -12,6 +12,7 @@ def get_driver():
 def task6():
     driver = get_driver()
     driver.get("https://owasp.org/www-project-top-ten/")
+
     vulnerabilities_items = driver.find_elements(By.XPATH, "//ul/li/a[strong]")
     # By.CSS_SELECTOR, "ul.results > li.row.cp-search-result-item"
     print(f"Found {len(vulnerabilities_items)} vulnerability entries.")
@@ -25,6 +26,7 @@ def task6():
             results.append({'title': title, 'link': href})
         except Exception as e:
             print(f"Skipping entry due to error: {e}")
+            
     driver.quit()
 
     for item in results:
@@ -36,5 +38,6 @@ def task6():
         writer.writeheader()
         writer.writerows(results)
     print(f"CSV written to: {csv_path}")
+
 if __name__ == "__main__":
     task6()
